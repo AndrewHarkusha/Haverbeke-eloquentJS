@@ -24,3 +24,19 @@ function countBs(Str, Chr){
 	}
 	return count;
 }
+
+function range(start, end){
+	var resArr = [];
+	for(i=start;i<=end;i++){
+		resArr.push(i);
+	}
+	return resArr;
+}
+
+function sum(arr){
+	var sm = 0;
+	for(element in arr){
+		sm = sm + + arr[element];
+	}
+	return sm;
+}
