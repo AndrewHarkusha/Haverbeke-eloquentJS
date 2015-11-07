@@ -40,3 +40,41 @@ function sum(arr){
 	}
 	return sm;
 }
+
+function reverseArray(arr){
+	var returnArr = [];
+	for(i=0;i<=arr.length-1;i++){
+		returnArr[arr.length-i] = arr[i];
+	}
+	return returnArr;
+}
+
+function reverseArrayInPlace(arr){
+	var returnArr = [];
+	for(i=0;i<=arr.length-1;i++){
+		returnArr[arr.length-i] = arr[i];
+	}
+	arr = returnArr;
+}
+
+function arrayToList(arr){
+	var returnList = [];
+	i = arr.length-1;
+	j=0;
+	while(i>=0){
+		if (i == arr.length-1){
+			returnList.push({
+			value: arr[i],
+			rest: null
+			});
+		} else {
+			returnList.push({
+			value: arr[i],
+			rest: returnList[j-1]
+			});
+		}
+		i--;
+		j++;
+	}
+	return returnList;
+}
